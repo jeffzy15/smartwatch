@@ -1,6 +1,5 @@
 
-> Open this page at [https://jeffzy15.github.io/physics-ga/](https://jeffzy15.github.io/physics-ga/)
-
+> Open this page at [https://jeffzy15.github.io/smartwatch/](https://jeffzy15.github.io/smartwatch/)
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
@@ -8,22 +7,22 @@ This repository can be added as an **extension** in MakeCode.
 * open [https://makecode.microbit.org/](https://makecode.microbit.org/)
 * click on **New Project**
 * click on **Extensions** under the gearwheel menu
-* search for **https://github.com/jeffzy15/physics-ga** and import
+* search for **https://github.com/jeffzy15/smartwatch** and import
 
-## Edit this project ![Build status badge](https://github.com/jeffzy15/physics-ga/workflows/MakeCode/badge.svg)
+## Edit this project ![Build status badge](https://github.com/jeffzy15/smartwatch/workflows/MakeCode/badge.svg)
 
 To edit this repository in MakeCode.
 
 * open [https://makecode.microbit.org/](https://makecode.microbit.org/)
 * click on **Import** then click on **Import URL**
-* paste **https://github.com/jeffzy15/physics-ga** and click import
+* paste **https://github.com/jeffzy15/smartwatch** and click import
 
 ## Blocks preview
 
 This image shows the blocks code from the last commit in master.
 This image may take a few minutes to refresh.
 
-![A rendered view of the blocks](https://github.com/jeffzy15/physics-ga/raw/master/.github/makecode/blocks.png)
+![A rendered view of the blocks](https://github.com/jeffzy15/smartwatch/raw/master/.github/makecode/blocks.png)
 
 #### Metadata (used for search, rendering)
 
