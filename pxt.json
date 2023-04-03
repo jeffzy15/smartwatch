@@ -1,30 +1,22 @@
 {
-    "name": "Smartwatch",
-    "description": "",
+    "name": "smartwatch",
     "dependencies": {
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "Grove": "github:seeed-studio/pxt-grove#v0.5.0",
-        "microbit-pxt-timeanddate": "github:bsiever/microbit-pxt-timeanddate#v2.0.33",
-        "radio-broadcast": "*"
+        "radio-broadcast": "*",
+        "microbit-pxt-timeanddate": "github:bsiever/microbit-pxt-timeanddate#v2.0.33"
     },
     "files": [
+        ".vscode/settings.json",
+        "README.md",
         "main.blocks",
         "main.ts",
-        "README.md",
-        "main.py",
-        null
-    ],
-    "testFiles": [
-        "test.ts"
+        "test.ts",
+        "tsconfig.json"
     ],
     "targetVersions": {
-        "branch": "v5.0.12",
-        "tag": "v5.0.12",
-        "commits": "https://github.com/microsoft/pxt-microbit/commits/97491d6832cccab6b5bdc05b58e4c6b5dcc18cdd",
         "target": "5.0.12",
-        "pxt": "8.0.7",
         "targetId": "microbit"
     },
     "supportedTargets": [
