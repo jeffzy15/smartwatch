@@ -87,8 +87,10 @@ function appointment () {
             }
         })
     }
-    basic.showString(timeanddate.dateTime())
+    appoint = "" + timeanddate.time(timeanddate.TimeFormat.HMMAMPM) + timeanddate.date(timeanddate.DateFormat.MD)
+    radio.sendString(appoint)
 }
+let appoint = ""
 let parkinson = 0
 let steps = 0
 radio.setGroup(58)
@@ -98,5 +100,5 @@ basic.forever(function () {
         steps += 1
         radio.sendNumber(steps)
     }
-    radio.sendString(timeanddate.dateTime())
+    radio.sendString(appoint)
 })
