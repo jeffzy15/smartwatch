@@ -22,6 +22,7 @@ input.onButtonPressed(Button.AB, function () {
     appointment()
 })
 input.onButtonPressed(Button.B, function () {
+    isReading = true
     for (let index = 0; index < 30; index++) {
         if (input.acceleration(Dimension.Strength) > 1050) {
             parkinson += 1
@@ -35,18 +36,8 @@ input.onButtonPressed(Button.B, function () {
     }
     steps = 0
     parkinson = 0
-})
-input.onGesture(Gesture.Shake, function () {
-    radio.sendMessage(RadioMessage.Response)
-    basic.showLeds(`
-        . # . # .
-        . . . . .
-        # . . . #
-        . # . # .
-        . . # . .
-        `)
-    basic.pause(100)
-    basic.clearScreen()
+    basic.pause(1000)
+    isReading = false
 })
 function appointment () {
     basic.showString("month")
@@ -88,17 +79,32 @@ function appointment () {
         })
     }
     appoint = "" + timeanddate.time(timeanddate.TimeFormat.HMMAMPM) + timeanddate.date(timeanddate.DateFormat.MD)
-    radio.sendString(appoint)
+    radio.sendString("" + (appoint))
 }
+input.onGesture(Gesture.TiltRight, function () {
+    radio.sendMessage(RadioMessage.Response)
+    basic.showLeds(`
+        . # . # .
+        . . . . .
+        # . . . #
+        . # . # .
+        . . # . .
+        `)
+    basic.pause(100)
+    basic.clearScreen()
+})
 let appoint = ""
 let parkinson = 0
+let isReading = false
 let steps = 0
 radio.setGroup(58)
 steps = 0
 basic.forever(function () {
-    if (input.acceleration(Dimension.Strength) > 1500) {
-        steps += 1
-        radio.sendNumber(steps)
+    if (!(isReading)) {
+        if (input.acceleration(Dimension.Strength) > 1500) {
+            steps += 1
+            radio.sendNumber(steps)
+        }
     }
-    radio.sendString(appoint)
+    radio.sendString("" + (appoint))
 })
